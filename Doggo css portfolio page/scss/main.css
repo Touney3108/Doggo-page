@@ -1,0 +1,449 @@
+*, *::before, *::after {
+  font-size: 0.625em;
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+  font-family: "Brush Script MT", cursive;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+main {
+  background-color: white;
+}
+
+.container {
+  width: 80vw;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 700px) {
+  .container {
+    width: 100%;
+  }
+}
+
+.volunteers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+@media only screen and (max-width: 800px) {
+  .volunteers {
+    gap: 4rem;
+    grid-template-columns: 1fr;
+  }
+}
+
+.heading-1 {
+  width: 50%;
+  text-align: center;
+  color: #dabb97;
+  font-size: 6rem;
+}
+@media only screen and (max-width: 1120px) {
+  .heading-1 {
+    font-size: 5rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .heading-1 {
+    font-size: 4rem;
+    width: 80%;
+  }
+}
+
+.heading-2 {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  color: #2E933C;
+  font-size: 4rem;
+}
+@media only screen and (max-width: 870px) {
+  .heading-2 {
+    font-size: 3.5rem;
+  }
+}
+
+.heading-3 {
+  font-size: 4rem;
+  color: #2E933C;
+}
+@media only screen and (max-width: 800px) {
+  .heading-3 {
+    font-size: 3.5rem;
+    padding: 2rem 4rem;
+  }
+}
+
+.mt-md {
+  margin-top: 5vh;
+}
+
+.mt-lg {
+  margin-top: 8vh;
+}
+
+.card {
+  height: 100%;
+  border: 1px solid #204E4A;
+  background-color: #2E933C;
+  transition: transform 0.3s;
+}
+@media only screen and (max-width: 800px) {
+  .card {
+    margin: 0 8rem;
+  }
+}
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0.2rem 1rem 1rem rgba(0, 0, 0, 0.6);
+}
+.card-body {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+.card-body br {
+  color: white;
+}
+.card-image {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card-name {
+  padding: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  background-image: linear-gradient(to bottom left, #204E4A, #08380e);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+.card-text {
+  color: white;
+  text-align: center;
+  font-size: 1.75rem;
+  padding: 1rem;
+}
+
+.dog-card {
+  border: 1px solid #204E4A;
+  border-radius: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 2vh;
+  background-color: #2E933C;
+  overflow: hidden;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.6);
+  transition: all 0.4s;
+}
+@media only screen and (max-width: 700px) {
+  .dog-card {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .dog-card {
+    grid-template-rows: repet(2, 1fr);
+  }
+}
+.dog-card:hover {
+  transform: translateY(-0.5vh);
+}
+.dog-card-img {
+  height: 40vh;
+  border-right: 1px solid #204E4A;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media only screen and (max-width: 600px) {
+  .dog-card-img {
+    grid-row: 1/3;
+  }
+}
+.dog-card-img-1 {
+  background-image: url(../img/dog1.jpg);
+  background-position: bottom;
+}
+.dog-card-img-2 {
+  background-image: url(../img/dog2.jpg);
+  background-position: top;
+}
+.dog-card-img-3 {
+  background-image: url(../img/dog3.jpg);
+  background-position: center;
+}
+.dog-card-body {
+  grid-column: 2/4;
+  color: white;
+  padding: 3rem;
+}
+@media only screen and (max-width: 600px) {
+  .dog-card-body {
+    grid-row: 1/2;
+    grid-column: 2/5;
+    padding: 1.5rem;
+  }
+}
+.dog-card-name {
+  font-size: 3rem;
+}
+.dog-card-about {
+  font-size: 1.5rem;
+}
+.dog-card-btn {
+  justify-self: center;
+  align-self: center;
+  margin: 0 auto;
+  font-size: 2rem;
+  line-height: 1;
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  background-color: white;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0.2rem 1rem 1rem rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+@media only screen and (max-width: 600px) {
+  .dog-card-btn {
+    grid-row: 2/3;
+    grid-column: 2/5;
+    margin-bottom: 1rem;
+  }
+}
+.dog-card-btn::before {
+  font-size: 2rem;
+  content: "adopt";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  line-height: 1;
+  color: transparent;
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: all 0.2s;
+}
+.dog-card-btn:hover::before {
+  transform: translate(-50%, -50%) scale(3.5);
+  background-color: transparent;
+}
+
+.nav {
+  width: 100vw;
+  background-color: #297045;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+}
+@media only screen and (max-width: 700px) {
+  .nav {
+    padding: 0 3rem;
+  }
+}
+.nav__spacing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+.nav__logo a:visited {
+  color: white;
+}
+.nav__logo-img {
+  background-color: white;
+  background-size: cover;
+  height: 8vh;
+  width: 8vh;
+  -webkit-mask-image: url(../img/dog.svg);
+  mask-image: url(../img/dog.svg);
+}
+.nav__logo-title {
+  font-size: 6vh;
+  font-weight: 100;
+}
+
+.hamburger {
+  width: 7vh;
+  height: 1.4vh;
+  border-radius: 1.4vh;
+  z-index: 5;
+  transition: all 0.3s;
+  background-color: white;
+}
+.hamburger::before, .hamburger::after {
+  content: "";
+  width: 7vh;
+  height: 1.4vh;
+  background-color: white;
+  z-index: 5;
+  transition: all 0.3s;
+}
+.hamburger::before {
+  position: absolute;
+  transform: translateY(-2.8vh);
+  border-radius: 1.4vh;
+}
+.hamburger::after {
+  position: absolute;
+  transform: translateY(2.8vh);
+  border-radius: 1.4vh;
+}
+.hamburger-circle {
+  background-image: radial-gradient(rgb(109, 213, 65), #2E933C);
+  height: 1.4vh;
+  width: 1.4vh;
+  position: absolute;
+  transform: translateX(2.8vh);
+  border-radius: 50%;
+  z-index: -1;
+  transition: transform 0.5s;
+}
+.hamburger__checkbox {
+  height: 7vh;
+  width: 7vh;
+  z-index: 6;
+  opacity: 0;
+  position: absolute;
+  top: 1.4vh;
+  cursor: pointer;
+}
+.hamburger__checkbox:checked ~ .hamburger {
+  background-color: transparent;
+}
+.hamburger__checkbox:checked ~ .hamburger::before {
+  transform: rotate(135deg);
+  border-radius: 1.4vh 0 1.4vh 0;
+}
+.hamburger__checkbox:checked ~ .hamburger::after {
+  transform: rotate(-135deg);
+  border-radius: 1.4vh 0 1.4vh 0;
+}
+.hamburger__checkbox:checked ~ .hamburger .hamburger-circle {
+  z-index: 2;
+  transform: translateX(2.8vh) scale(350);
+}
+.hamburger__checkbox:checked ~ .menu {
+  display: flex;
+}
+
+.menu {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  display: none;
+}
+.menu__link, .menu__link:visited {
+  text-decoration: none;
+  font-size: 6rem;
+  color: white;
+  text-align: center;
+  padding: 0.5rem 4rem;
+  transform: skewX(45deg);
+  transition: all 0.3s linear;
+}
+@media only screen and (max-width: 1050px) {
+  .menu__link, .menu__link:visited {
+    font-size: 5rem;
+  }
+}
+@media only screen and (max-width: 880px) {
+  .menu__link, .menu__link:visited {
+    font-size: 4rem;
+  }
+}
+@media only screen and (max-width: 735px) {
+  .menu__link, .menu__link:visited {
+    font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .menu__link, .menu__link:visited {
+    padding: 0.5rem 2rem;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .menu__link, .menu__link:visited {
+    font-size: 2.5rem;
+    padding: 0.5rem 1.5rem;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .menu__link, .menu__link:visited {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .menu__link, .menu__link:visited {
+    font-size: 1.5rem;
+  }
+}
+.menu__link:hover, .menu__link:visited:hover {
+  background-image: linear-gradient(to left bottom, rgb(109, 213, 65), #2E933C);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+.menu__link-bg {
+  cursor: pointer;
+  transform: skewX(-45deg);
+  background-image: linear-gradient(to right, transparent 0%, transparent 50%, white 50%, white);
+  background-size: 100vw;
+  background-position: 0%;
+  transition: all 0.3s linear;
+}
+.menu__link-bg:hover {
+  background-position: 100%;
+}
+
+.header {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(to left bottom, rgba(41, 112, 69, 0.8), rgba(32, 78, 74, 0.8)), url(../img/dogs-bg.jpg);
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  height: 20vh;
+  width: 100%;
+  background-color: #232323;
+  box-shadow: 0 -0.2rem 1rem rgba(0, 0, 0, 0.6);
+}
+.footer-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.footer-text {
+  color: white;
+  font-size: 1.2rem;
+  padding: 2rem;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,10 @@
+.header{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to left bottom,rgba($color-green-spring,.8),rgba($color-green-jungle,.8)),url(../img/dogs-bg.jpg);
+    background-size: cover;
+    background-position: top;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

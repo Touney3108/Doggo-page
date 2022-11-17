@@ -1,0 +1,30 @@
+$color-green:#2E933C;
+$color-green-lime:rgb(109, 213, 65);
+$color-green-light:#89e041;
+$color-white:white;
+$color-green-dark:#08380e;
+$color-green-spring:#297045;
+$color-green-jungle:#204E4A;
+$color-gold-glow:#ECBA82;
+$color-gold:#dabb97;
+$dark-overlay:linear-gradient(to right,rgba(0,0,0,.8),rgba(0,0,0,.8));
+$border:1px solid $color-green-jungle;
+$shadow:rgba(0,0,0,.6);
+$dark-gray:#232323;
+
+
+$hamburger-size:7vh;
+
+
+
+
+
+
+@import "base";
+@import "grid";
+@import "typography";
+@import "utilities";
+@import "components/card";
+@import "layout/navbar";
+@import "layout/header";
+@import "layout/footer";

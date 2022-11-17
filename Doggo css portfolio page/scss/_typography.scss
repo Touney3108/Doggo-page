@@ -1,0 +1,37 @@
+.heading-1{
+    width: 50%;
+    text-align: center;
+    color:$color-gold;
+    font-size: 6rem;
+
+    @media only screen and (max-width:1120px){
+        font-size:5rem;
+    }
+    @media only screen and (max-width:800px){
+        font-size:4rem;
+        width: 80%;
+
+    }
+    
+}
+.heading-2{
+    width: 80%;
+    margin:0 auto;
+    text-align: center;
+    
+    color:$color-green;
+    font-size:4rem;
+    @media only screen and (max-width:870px){
+        font-size:3.5rem;
+
+    }
+}
+
+.heading-3{
+    font-size:4rem;
+    color:$color-green;
+    @media only screen and (max-width:800px){
+        font-size:3.5rem;
+        padding:2rem 4rem;
+    }
+}

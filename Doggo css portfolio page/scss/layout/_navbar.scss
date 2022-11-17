@@ -1,0 +1,196 @@
+.nav{
+    width: 100vw;
+    background-color: $color-green-spring;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    @media only screen and (max-width:700px){
+        padding: 0 3rem;
+    }
+
+    &__spacing{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo{
+        
+        
+        a{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color:$color-white;
+            
+            
+
+            &:visited{
+                color:$color-white;
+            }
+        }
+        
+    }
+
+    &__logo-img{
+        background-color:white;
+        background-size: cover;
+        height: 8vh;
+        width: 8vh;
+        -webkit-mask-image:url(../img/dog.svg);
+        mask-image: url(../img/dog.svg);
+    }
+    &__logo-title{
+        //font-size:4rem;
+        font-size:6vh;
+        font-weight: 100;
+    }
+
+
+}
+
+.hamburger{
+    width: $hamburger-size;
+    height: calc($hamburger-size / 5);
+    border-radius: calc($hamburger-size / 5);
+    z-index: 5;
+    transition:all .3s;
+
+
+    background-color: $color-white;
+
+    &::before,&::after{
+        content: "";
+        width: $hamburger-size;
+        height: calc($hamburger-size / 5);
+        background-color: $color-white;
+        z-index: 5;
+        transition:all .3s;
+    }
+    &::before{
+        position:absolute;
+        transform:translateY(calc(-2 * ( $hamburger-size / 5) ));
+        border-radius: calc($hamburger-size / 5);
+    }
+    &::after{
+        position:absolute;
+        transform:translateY(calc(2 * ( $hamburger-size / 5) ));
+        border-radius:calc($hamburger-size / 5);
+    }
+    &-circle{
+        background-image:radial-gradient($color-green-lime,$color-green);
+        height: calc($hamburger-size / 5);
+        width: calc($hamburger-size / 5);
+        position: absolute;
+        transform: translateX(calc(2 * $hamburger-size / 5) );
+        border-radius: 50%;
+        z-index: -1;
+        transition:transform .5s;
+        
+       
+        
+    }
+
+
+    &__checkbox{
+        height: $hamburger-size;
+        width: $hamburger-size;
+        z-index: 6;
+        opacity: 0;
+        position:absolute;
+        top:calc($hamburger-size / 5);
+        cursor: pointer;
+
+        &:checked ~ .hamburger{
+            background-color: transparent;
+
+            &::before{
+                transform: rotate(135deg);
+                border-radius: calc($hamburger-size / 5) 0 calc($hamburger-size / 5) 0;
+            }
+            &::after{
+                transform: rotate(-135deg);
+                border-radius: calc($hamburger-size / 5) 0 calc($hamburger-size / 5)  0;
+            }
+            .hamburger-circle{
+                z-index: 2;
+                transform: translateX(calc(2 * $hamburger-size / 5) ) scale(350);
+            }
+            
+        }
+        &:checked ~ .menu{
+            display: flex;
+        }
+        
+        
+    }
+}
+
+.menu{
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    display:none;
+
+    &__link,&__link:visited{
+        text-decoration: none;
+        font-size: 6rem;
+        color:$color-white;
+        text-align: center;
+        padding:.5rem 4rem;
+        transform: skewX(45deg);
+        transition:all .3s linear;
+        @media only screen and (max-width:1050px){
+            font-size:5rem;
+        }
+        @media only screen and (max-width:880px){
+            font-size:4rem;
+        }
+        @media only screen and (max-width:735px){
+            font-size:3rem;
+        }
+        @media only screen and (max-width:500px){
+            padding:.5rem 2rem;
+        }
+        @media only screen and (max-width:430px){
+            font-size:2.5rem;
+            padding:.5rem 1.5rem;
+        }
+        @media only screen and (max-width:380px){
+            font-size:2rem;
+        }
+        @media only screen and (max-width:300px){
+            font-size:1.5rem;
+        }
+
+        
+
+    }
+    &__link:hover,&__link:visited:hover{
+        background-image: linear-gradient(to left bottom ,$color-green-lime,$color-green);
+        background-clip:text;
+        color:transparent;
+    }
+    &__link-bg{
+        cursor: pointer;
+        transform: skewX(-45deg);
+        background-image: linear-gradient(to right,transparent 0%,transparent 50%,$color-white 50%,$color-white);
+        background-size: 100vw;
+        background-position: 0%;
+        
+        transition:all .3s linear;
+        
+
+        &:hover{
+           background-position: 100%;
+        }
+    }
+}
